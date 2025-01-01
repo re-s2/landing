@@ -17,7 +17,7 @@ body {
 }
 .intro {
   grid-column: span 1;
-  grid-row: span 3;
+  grid-row: span 2;
   background-color: #111;
   border: 1px solid #326DB3;
   display: flex;
