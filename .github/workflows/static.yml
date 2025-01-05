@@ -35,13 +35,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Move media into app
+        run: mv media app/media
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Combine both folders into one directory for deployment
-          path: |
-            ./app/**
-            ./media/**
+          path: './app'
 
       - name: Deploy to GitHub Pages
         id: deployment
