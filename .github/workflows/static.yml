@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to Pages
+# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -31,18 +31,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Move media into app
-        run: mv media app/media
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Upload content only from the /app folder
           path: './app'
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
